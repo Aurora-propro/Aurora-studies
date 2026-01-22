@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurora Studies | Academic Mini-Reviews</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand">
+      <img src="Aurora-logo.jpg" alt="Aurora Studies logo" class="logo" />
+      <div>
+        <h1>Aurora Studies</h1>
+        <p class="tagline">Short, concise insights from reputable research</p>
+      </div>
+    </div>
+    <div class="search-container">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search studies by topic, field, or keywords…"
+        aria-label="Search studies"
+      />
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <h2>Filters</h2>
+      <div class="filter-group">
+        <label for="fieldFilter">Field</label>
+        <select id="fieldFilter">
+          <option value="all">All fields</option>
+          <option value="psychology">Psychology</option>
+          <option value="education">Education</option>
+          <option value="neuroscience">Neuroscience</option>
+          <option value="environment">Environment</option>
+          <option value="health">Health</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="yearFilter">Year</label>
+        <select id="yearFilter">
+          <option value="all">All years</option>
+          <option value="2023">2023+</option>
+          <option value="2018-2022">2018–2022</option>
+          <option value="2010-2017">2010–2017</option>
+        </select>
+      </div>
+
+      <p class="disclaimer">
+        Summaries are simplified. Always read the original paper before
+        citing in academic work.
+      </p>
+    </aside>
+
+    <section class="content">
+      <section id="postsContainer" class="posts">
+        <!-- Cards injected by script.js -->
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Aurora Studies · Curated mini-reviews of peer‑reviewed research. Built for quick reading and reliable referencing.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
