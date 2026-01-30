@@ -150,3 +150,32 @@ yearFilter.addEventListener("change", applyFilters);
 // Initial render
 renderPosts(studies);
 
+// Filter button event listeners
+const filterButtons = document.querySelectorAll('.filter-btn');
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Remove active class from all buttons
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    // Add active class to clicked button
+    button.classList.add('active');
+    
+    const filterValue = button.getAttribute('data-filter');
+    
+    // Get all posts
+    const posts = document.querySelectorAll('.post');
+    
+    posts.forEach(post => {
+      if (filterValue === 'all') {
+        post.classList.remove('hidden');
+      } else {
+        const postTopic = post.getAttribute('data-topic');
+        if (postTopic === filterValue) {
+          post.classList.remove('hidden');
+        } else {
+          post.classList.add('hidden');
+        }
+      }
+    });
+  });
+});
+
