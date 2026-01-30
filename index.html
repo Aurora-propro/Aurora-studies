@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aurora Studies</title>
+  <title>Aurora Studies · Home</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -15,9 +15,8 @@
       <img src="Aurora logo.png" alt="Aurora Studies logo" class="logo" />
       <h1>Aurora Studies</h1>
       <p class="subtitle">
-        Evidence‑based, student‑friendly summaries of research on anything, posting statistics. 
+        Evidence-based mini studies for students, written in clear language.
       </p>
-
       <nav>
         <a href="index.html">Home</a>
         <a href="#topics">Topics</a>
@@ -25,44 +24,91 @@
       </nav>
     </header>
 
-    <main>
-      <section class="intro">
-        <p>
-          This is a tiny blog where all posts are checked, edited and given proof,
-          but translated into language that makes sense for school students, spanning from elementary to university!
-        </p>
-      </section>
+    <!-- Search + Filters -->
+    <section class="search-filters">
+      <h2>Explore studies</h2>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search articles (e.g. sleep, focus, exercise)..."
+      />
+      <div class="filter-row">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="sleep">Sleep</button>
+        <button class="filter-btn" data-filter="focus">Focus</button>
+        <button class="filter-btn" data-filter="exercise">Exercise</button>
+        <button class="filter-btn" data-filter="wellbeing">Well-being</button>
+      </div>
+    </section>
 
-      <section class="posts" id="topics">
-        <!-- Placeholder post only -->
-        <article class="post">
+    <main id="topics">
+      <section class="posts">
+        <!-- Sleep article (clickable to open full AI article) -->
+        <article class="post" data-tags="sleep wellbeing school" data-topic="sleep">
           <div class="post-top">
-            <div class="meta">Placeholder · Study‑backed blog</div>
-            <h2>How Sleep Really Affects Your Grades</h2>
+            <div class="meta">Sleep · Science</div>
+            <h2>
+              <a href="sleep-article.html">Does more sleep really boost grades?</a>
+            </h2>
             <p>
-              A quick look at research on teen sleep and academic performance, plus what it actually
-              means for homework, revision, and late‑night scrolling.
+              A short breakdown of what research says about sleep duration,
+              memory and test performance, plus realistic tips for busy students.
             </p>
           </div>
-
           <div class="post-bottom">
             <div class="tags">
               <span class="tag">Sleep</span>
+              <span class="tag">Well-being</span>
               <span class="tag">School</span>
-              <span class="tag">Science</span>
             </div>
-            <a href="#" class="read-more">
-              Read soon
-              <span>→</span>
-            </a>
+          </div>
+        </article>
+
+        <!-- Example focus article -->
+        <article class="post" data-tags="focus productivity study" data-topic="focus">
+          <div class="post-top">
+            <div class="meta">Focus · Study habits</div>
+            <h2>Can short breaks actually improve focus?</h2>
+            <p>
+              Looking at research on "Pomodoro-style" study sessions and why
+              your brain sometimes works better in focused sprints.
+            </p>
+          </div>
+          <div class="post-bottom">
+            <div class="tags">
+              <span class="tag">Focus</span>
+              <span class="tag">Productivity</span>
+              <span class="tag">Study</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Example exercise article -->
+        <article class="post" data-tags="exercise wellbeing performance" data-topic="exercise">
+          <div class="post-top">
+            <div class="meta">Exercise · Health</div>
+            <h2>Does morning exercise improve test scores?</h2>
+            <p>
+              Reviewing studies on physical activity before exams and how movement
+              affects cognitive performance and stress levels.
+            </p>
+          </div>
+          <div class="post-bottom">
+            <div class="tags">
+              <span class="tag">Exercise</span>
+              <span class="tag">Well-being</span>
+              <span class="tag">Performance</span>
+            </div>
           </div>
         </article>
       </section>
     </main>
 
     <footer>
-      Made with curiosity · Aurora Studies · 2026
+      <p>&copy; 2025 Aurora Studies · Made by a student for students</p>
     </footer>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
