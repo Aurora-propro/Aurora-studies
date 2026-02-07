@@ -29,8 +29,7 @@ function applySearchAndFilter() {
     const text = post.textContent.toLowerCase(); // all text content
 
     // Check filter match
-    const matchesFilter = activeFilter === 'all' || topic === activeFilter;
-    
+    const matchesFilter = activeFilter === 'all' || topic === activeFilter || (tags && tags.toLowerCase().includes(activeFilter));    
     // Check search match (search in text content AND tags)
     const matchesSearch = !query || text.includes(query) || (tags && tags.toLowerCase().includes(query));
 
