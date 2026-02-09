@@ -29,6 +29,10 @@
     <!-- Search + Filters -->
     <section class="search-filters">
       <h2>Explore studies</h2>
+            <label class="ai-toggle">
+                      <input type="checkbox" id="aiToggle" checked>
+                      Show AI-generated studies
+                    </label>
       <input
         type="text"
         id="searchInput"
@@ -40,8 +44,7 @@
         <button class="filter-btn" data-filter="focus">Focus</button>
         <button class="filter-btn" data-filter="exercise">Exercise</button>
         <button class="filter-btn" data-filter="wellbeing">Well-being</button>
-                    <button class="filter-btn" data-filter="ai">AI made</button>
-      </div>
+                          </div>
     </section>
 
     <main id="topics">
@@ -51,7 +54,7 @@
             <div class="meta">Sleep · Science</div>
             <h2>
               <a href="sleep-article.html">Does more sleep really boost grades?</a>
-            </h2>
+            </h2> data-type="ai"
             <p>
               A short breakdown of what research says about sleep duration,
               memory and test performance, plus realistic tips for busy students.
@@ -68,7 +71,7 @@
         </article>
 
         <!-- Example focus article -->
-            <article class="post" data-tags="focus productivity study ai" data-topic="focus">          <div class="post-top">
+            <article class="post" data-tags="focus productivity study ai" data-topic="focus">          <div class="post-top"> data-type="ai"
             <div class="meta">Focus · Study habits</div>
         <h2>
           <a href="focus-article.html">Can short breaks actually improve focus?</a>
@@ -88,7 +91,7 @@
         </article>
 
         <!-- Example exercise article -->
-            <article class="post" data-tags="exercise wellbeing performance ai" data-topic="exercise">          <div class="post-top">
+            <article class="post" data-tags="exercise wellbeing performance ai" data-topic="exercise">          <div class="post-top"> data-type="ai"
             <div class="meta">Exercise · Health</div>
         <h2>
           <a href="exercise-article.html">Does morning exercise improve test scores?</a>
@@ -114,6 +117,25 @@
     </footer>
   </div>
 
+  <script>
+        const aiToggle = document.getElementById('aiToggle');
+        const articles = document.querySelectorAll('.post');
+
+        function updateArticles() {
+                const showAI = aiToggle.checked;
+                articles.forEach(article => {
+                          const type = article.getAttribute('data-type');
+                          if (type === 'ai' && !showAI) {
+                                      article.style.display = 'none';
+                                    } else {
+                                      article.style.display = '';
+                                    }
+                        });
+              }
+
+        aiToggle.addEventListener('change', updateArticles);
+        updateArticles();
+      </script>
   <script src="script.js"></script>
 </body>
 </html>
