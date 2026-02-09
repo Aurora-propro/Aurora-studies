@@ -497,20 +497,29 @@ footer {
 }
 
 /* AI Toggle Checkbox */
-.ai-toggle {
-    display: block;
-    margin: 1rem 0 1.5rem 0;
-    color: rgba(255, 255, 255, 0.85);
+..ai-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1.25rem 0 1.75rem 0;
+    padding: 0.75rem 1rem;
+    background: rgba(167, 139, 250, 0.1);
+    border: 1px solid rgba(167, 139, 250, 0.3);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.9);
     font-size: 0.95rem;
-  }
-
-.ai-toggle input {
-    margin-right: 0.5rem;
     cursor: pointer;
+    transition: all 0.2s ease;
   }
 
-/* Back to all articles link */
-.back-link {
-    text-align: center;
-    margin-top: 2rem;
+.ai-toggle:hover {
+    background: rgba(167, 139, 250, 0.15);
+    border-color: rgba(167, 139, 250, 0.5);
+  }
+
+.ai-toggle input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #a78bfa;
   }
