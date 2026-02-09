@@ -495,3 +495,22 @@ footer {
   color: #c4b5fd;
   font-weight: 600;
 }
+
+/* AI Toggle Checkbox */
+.ai-toggle {
+    display: block;
+    margin: 1rem 0 1.5rem 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+  }
+
+.ai-toggle input {
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+
+/* Back to all articles link */
+.back-link {
+    text-align: center;
+    margin-top: 2rem;
+  }
